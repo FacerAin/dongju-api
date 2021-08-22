@@ -2,6 +2,7 @@ from typing import Optional
 from pydantic import BaseModel, Field
 
 class TextSchema(BaseModel):
+    title: str = Field(...)
     author: str = Field(...)
     year: int = Field(...)
     emotions: Optional[list]
@@ -10,6 +11,7 @@ class TextSchema(BaseModel):
     class Config:
         schema_extra = {
             "example":{
+                "title": "서시",
                 "author": "윤동주",
                 "year": 1941,
                 "emotions": ['tense'],
@@ -19,14 +21,16 @@ class TextSchema(BaseModel):
         
         
 class UpdateTextModel(BaseModel):
-    author: Optional(str)
-    year: Optional(int)
-    emotions: Optional(list)
-    text: Optional(str)
+    title: Optional[str]
+    author: Optional[str]
+    year: Optional[int]
+    emotions: Optional[list]
+    text: Optional[str]
     
     class Config:
         schema_extra = {
             "example":{
+                "title": "서시",
                 "author": "윤동주",
                 "year": 1941,
                 "emotions": ['tense'],
