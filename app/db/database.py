@@ -5,7 +5,6 @@ MONGO_DETAILS = "mongodb://localhost:27017"
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 database = client.texts
 text_collection = database.get_collection("texts_collection")
-
 def text_helper(text) -> dict:
     return {
             "id": str(text["_id"]),

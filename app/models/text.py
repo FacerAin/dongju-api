@@ -38,16 +38,13 @@ class UpdateTextModel(BaseModel):
             }
         }
 
-
-def ResponseModel(data, message):
+'''
+def ResponseModel(data):
     return {
-        "data": [data],
-        "code": 200,
-        "message": message,
+        "data": data,
     }
 
 
-def ErrorResponseModel(error, code, message):
-    return {"error": error, "code": code, "message": message}
-    
-    
+def ErrorResponseModel(error):
+    return {"error": error}
+'''
