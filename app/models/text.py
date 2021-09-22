@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 class TextSchema(BaseModel):
     title: str = Field(...)
     author: str = Field(...)
-    year: int = Field(...)
+    year: Optional[int]
     emotions: Optional[list]
     text: str = Field(...)
         
