@@ -8,7 +8,8 @@ DEBUG = False
 VERSION = "0.1"
 
 origins = [
-    "http://react.facerain.club"
+    "http://react.facerain.club",
+    "http://dongju.facerain.club"
 ]
 
 def get_application() -> FastAPI:
